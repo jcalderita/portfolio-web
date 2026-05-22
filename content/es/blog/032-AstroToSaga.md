@@ -43,7 +43,7 @@ La decisión no fue técnica. Fue sobre coherencia. Quiero que si alguien visita
 
 ## Mi Resultado 🎯
 
-El sitio que lees ahora mismo está generado con <span class="high">Saga</span>, compilado con Swift, y desplegado sobre <span class="high">Cloudflare Workers</span> sin que Node haya intervenido en mi máquina.
+El sitio que lees ahora mismo está generado con <span class="high">Saga</span>, compilado con Swift, y desplegado sobre <span class="high">Cloudflare Pages</span> sin que Node haya intervenido en mi máquina.
 
 Lo que me sorprendió no fue el resultado técnico. Fue la sensación de coherencia. Abrir mi portfolio y ver que todo, desde la primera línea hasta el último deploy, es Swift me produce una tranquilidad difícil de explicar.
 

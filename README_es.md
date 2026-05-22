@@ -30,8 +30,6 @@ El sitio soporta varios idiomas (español e inglés), está optimizado para SEO 
 ├── Sources/
 │   ├── PortfolioSite/     # Generador del sitio (layouts, páginas, componentes, SEO, i18n)
 │   └── ImageOptimizer/    # Pipeline de optimización de imágenes PNG → WebP
-├── worker/
-│   └── index.js           # Cloudflare Worker (sin uso — conservado como referencia)
 ├── content/
 │   ├── en/blog/           # Artículos del blog en inglés (Markdown)
 │   ├── es/blog/           # Artículos del blog en español (Markdown)
@@ -40,7 +38,7 @@ El sitio soporta varios idiomas (español e inglés), está optimizado para SEO 
 │   ├── llms.txt           # Descripción para crawlers de IA (spec llmstxt.org)
 │   └── static/            # CSS, imágenes, favicons, PDFs
 ├── Package.swift           # Manifiesto de Swift Package Manager
-├── wrangler.toml           # Configuración de Cloudflare Workers (binding ASSETS)
+├── wrangler.toml           # Configuración de Cloudflare Pages
 └── deploy/                 # Salida generada (ignorado por git)
 ```
 

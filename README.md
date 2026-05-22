@@ -30,8 +30,6 @@ The site supports multiple languages (Spanish and English), is optimized for SEO
 ├── Sources/
 │   ├── PortfolioSite/     # Site generator (layouts, pages, components, SEO, i18n)
 │   └── ImageOptimizer/    # PNG → WebP image optimization pipeline
-├── worker/
-│   └── index.js           # Cloudflare Worker (unused — kept for reference)
 ├── content/
 │   ├── en/blog/           # English blog posts (Markdown)
 │   ├── es/blog/           # Spanish blog posts (Markdown)
@@ -40,7 +38,7 @@ The site supports multiple languages (Spanish and English), is optimized for SEO
 │   ├── llms.txt           # LLM crawler description (llmstxt.org spec)
 │   └── static/            # CSS, images, favicons, PDFs
 ├── Package.swift           # Swift Package Manager manifest
-├── wrangler.toml           # Cloudflare Workers config (ASSETS binding)
+├── wrangler.toml           # Cloudflare Pages config
 └── deploy/                 # Generated output (git-ignored)
 ```
 
