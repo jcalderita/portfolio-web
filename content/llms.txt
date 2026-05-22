@@ -23,7 +23,7 @@ Technical articles in Spanish and English about Swift development, Server-Side S
 
 ## Key Topics
 
-Swift, SwiftUI, Server-Side Swift, iOS, visionOS, Accessibility, PostgreSQL, Async/Await, Concurrency, Static Site Generation, Cloudflare Workers
+Swift, Vapor, Server-Side Swift, PostgreSQL, Concurrency, Async/Await, AI coding tools, iOS, visionOS, Accessibility, Testing, Static Site Generation, Shell scripting
 
 ## Optional
 
