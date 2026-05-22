@@ -207,9 +207,9 @@ func renderSitemap(context: PageRenderingContext) -> String {
         dateByURL[item.relativeDestination.string] = item.date
     }
 
-    // Collect all generated pages except this sitemap and 404
+    // Collect all generated pages except this sitemap, 404 and llms.txt
     let paths = context.generatedPages
-        .filter { $0 != context.outputPath && $0.string != "404.html" }
+        .filter { $0 != context.outputPath && $0.string != "404.html" && $0.string != "llms.txt" }
         .sorted { $0.string < $1.string }
 
     // Build item lookup for hreflang alternates

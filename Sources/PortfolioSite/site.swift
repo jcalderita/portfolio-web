@@ -50,6 +50,7 @@ enum Page: CaseIterable {
     case home
     case blogIndex
     case sitemap
+    case llms
     case notFound
 
     func create(on saga: Saga) -> Saga {
@@ -60,6 +61,8 @@ enum Page: CaseIterable {
             saga.createPage("blog/index.html", forEachLocale: swim(renderBlogIndex))
         case .sitemap:
             saga.createPage("sitemap.xml", using: renderSitemap)
+        case .llms:
+            saga.createPage("llms.txt", using: renderLLMsTxt)
         case .notFound:
             saga.createPage("404.html", using: swim(render404))
         }
