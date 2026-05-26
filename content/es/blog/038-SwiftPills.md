@@ -6,7 +6,7 @@ description: Píldoras de cinco minutos sobre Swift que te enseñan cosas que ni
 tags: Swift, Conference
 cover: SwiftPills
 coverDescription: Jorge sentado en su escritorio frente a su MacBook con logo de Apple, tomando una píldora de un frasco grande etiquetado Swift Pills con el logo de Swift, mientras por la ventana se ven corredores en un parque con árboles y cielo azul.
-publish: false
+publish: true
 ---
 ---
 ## Mi Problema 🤔
