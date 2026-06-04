@@ -1,8 +1,15 @@
+import Foundation
 import Moon
 import Saga
 import SagaParsleyMarkdownReader
 import SagaPathKit
 import SagaSwimRenderer
+
+private extension Date {
+    var asUTCDay: Date {
+        addingTimeInterval(TimeInterval(TimeZone.current.secondsFromGMT(for: self)))
+    }
+}
 
 extension Saga {
     convenience init() throws {
@@ -29,7 +36,8 @@ extension Saga {
                         author: SiteConfig.author,
                         baseURL: SiteConfig.baseURL,
                         summary: { $0.metadata.description },
-                        image: { "/static/blog/\($0.metadata.cover).webp" }
+                        image: { "/static/blog/\($0.metadata.cover).webp" },
+                        dateKeyPath: \.date.asUTCDay
                     ),
                     output: "feed.xml"
                 ),
