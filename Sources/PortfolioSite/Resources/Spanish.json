@@ -56,6 +56,29 @@
   "education": [
     {
       "title": "APPLE CODING ACADEMY",
+      "role": "Swift Agentic Engineering Program",
+      "place": "España",
+      "interval": "Mayo 2026",
+      "responsibilities": [
+        "Dominio de agentic coding con Claude Code, Codex, Open Code y Coding Intelligence en Xcode 26.",
+        "Metodología Spec Driven Development (SDD) para producir código de calidad desde la especificación.",
+        "Construcción de un MCP Server propio en Swift con búsqueda semántica 100% privada.",
+        "Integración del Foundation Models Framework de Apple para inferencia on-device sin costes."
+      ],
+      "technologies": [
+        "Swift 6.3",
+        "Claude Code",
+        "MCP",
+        "Foundation Models",
+        "Coding Intelligence",
+        "Spec Driven Development",
+        "Core ML"
+      ],
+      "diploma": "SAE26",
+      "alt": "Diploma aprovechamiento, 60 horas."
+    },
+    {
+      "title": "APPLE CODING ACADEMY",
       "role": "Swift Accessibility Program",
       "place": "España",
       "interval": "Julio 2025",
