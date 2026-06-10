@@ -1,12 +1,12 @@
 ---
 title: Claude Voice
 slug: claude-voice
-date: 2026-08-05
+date: 2026-06-10
 description: Cómo un accidente en carrera de monte me obligó a comunicarme con la IA usando la voz y terminé aprendiendo una habilidad que no sabía que necesitaba.
 tags: AI, Claude
 cover: ClaudeVoice
 coverDescription: Jorge sentado en su escritorio con el brazo y la pierna escayolados hablando animadamente con Claude, representado como un monitor con cara sonriente, con un bocadillo que dice "bla, bla, bla...". Al fondo, por la ventana, se ven otros corredores entrenando en la calle. Sus zapatillas de running están en el suelo a su lado.
-publish: false
+publish: true
 ---
 ---
 ## Mi Problema 🤔

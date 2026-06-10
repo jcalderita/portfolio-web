@@ -1,7 +1,7 @@
 ---
 title: NPX Skills
 slug: npx-skills
-date: 2026-07-15
+date: 2026-07-22
 description: Por qué no uso skills npx de otros y creo las mías propias directamente con Claude Code: cada flujo es distinto y las skills deben encajar conmigo.
 tags: AI, Shell
 cover: NPXSkills

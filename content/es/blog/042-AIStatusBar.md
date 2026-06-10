@@ -1,7 +1,7 @@
 ---
 title: AI Status Bar
 slug: ai-status-bar
-date: 2026-06-17
+date: 2026-06-24
 description: Cómo monté una status bar personalizada en Claude Code para tener siempre visible el contexto, tokens y límites de uso sin gastar ni un token extra.
 tags: AI, Shell
 cover: AIStatusBar
