@@ -28,7 +28,7 @@ Dejo fuera solo las versiones en ASL y los recaps (Dub Dub Daily, recap del Stat
 
 ---
 
-### Bloque 0 — La base
+### Bloque 0 — Las presentaciones
 
 Antes de cualquier sesión técnica, estos videos dan el marco del año. El teaser abre boca; Keynote y State of the Union son los que mandan.
 
@@ -467,67 +467,28 @@ Reconocimiento de escritura a mano con la misma tecnología detrás de Freeform 
 
 Las Group Labs eran sesiones de Q&A en directo con ingenieros y diseñadores de Apple durante la semana del evento. Apple las mantiene en el catálogo aunque la sesión interactiva ya pasara, así que sirven como referencia rápida del área en la que esté trabajando. Las descripciones oficiales son prácticamente la misma boilerplate, así que las agrupo por tema con una línea de contexto.
 
-**Núcleo del lenguaje y frameworks principales**
-
-**[Swift Group Lab](https://developer.apple.com/videos/play/wwdc2026/8001/)**
-Q&A sobre los anuncios de Swift de la semana.
-
-**[SwiftUI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8006/)** y **[SwiftUI Group Lab (segunda tanda)](https://developer.apple.com/videos/play/wwdc2026/8120/)**
-Dos sesiones de Q&A sobre los anuncios de SwiftUI.
-
-**[SwiftUI for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8002/)**
-Q&A para arrancar con SwiftUI desde cero.
-
-**[SwiftData Group Lab](https://developer.apple.com/videos/play/wwdc2026/8017/)**
-Q&A sobre los anuncios de SwiftData.
-
-**Xcode, rendimiento y plataformas**
-
-**[Xcode Tips and Tricks Group Lab](https://developer.apple.com/videos/play/wwdc2026/8013/)**
-Q&A para sacarle el máximo a Xcode.
-
-**[Power and Performance Group Lab](https://developer.apple.com/videos/play/wwdc2026/8003/)**
-Q&A sobre los anuncios de potencia y rendimiento.
-
-**[visionOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8004/)**
-Q&A sobre los anuncios de visionOS.
-
-**[watchOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8014/)**
-Q&A sobre los anuncios de watchOS.
-
-**[Safari and Web Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8015/)**
-Q&A sobre los anuncios de Safari y tecnologías web.
-
-**Inteligencia, ML y AI**
-
-**[Apple Intelligence Group Lab](https://developer.apple.com/videos/play/wwdc2026/8011/)**
-Q&A sobre los anuncios de Apple Intelligence.
-
-**[Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8016/)**
-Q&A sobre los anuncios de ML y AI.
-
-**[Coding Intelligence for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8007/)**
-Q&A para arrancar con coding intelligence.
-
-**[Coding Intelligence, Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8121/)**
-Q&A combinado sobre coding intelligence, ML y AI.
-
-**Plataforma, distribución y diseño**
-
-**[Accessibility Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8005/)**
-Q&A sobre los anuncios de accesibilidad.
-
-**[Privacy and Security Group Lab](https://developer.apple.com/videos/play/wwdc2026/8009/)**
-Q&A sobre los anuncios de privacidad y seguridad.
-
-**[App Store Connect Group Lab](https://developer.apple.com/videos/play/wwdc2026/8010/)**
-Q&A sobre los anuncios de App Store Connect.
-
-**[Camera and Photo Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8018/)**
-Q&A sobre los anuncios de cámara y fotografía.
-
-**[Icon Composer for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8012/)**
-Q&A para arrancar con Icon Composer.
+- **Núcleo del lenguaje y frameworks principales**
+  - **[Swift Group Lab](https://developer.apple.com/videos/play/wwdc2026/8001/)** — Q&A sobre los anuncios de Swift de la semana.
+  - **[SwiftUI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8006/)** y **[SwiftUI Group Lab (segunda tanda)](https://developer.apple.com/videos/play/wwdc2026/8120/)** — Dos sesiones de Q&A sobre los anuncios de SwiftUI.
+  - **[SwiftUI for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8002/)** — Q&A para arrancar con SwiftUI desde cero.
+  - **[SwiftData Group Lab](https://developer.apple.com/videos/play/wwdc2026/8017/)** — Q&A sobre los anuncios de SwiftData.
+- **Xcode, rendimiento y plataformas**
+  - **[Xcode Tips and Tricks Group Lab](https://developer.apple.com/videos/play/wwdc2026/8013/)** — Q&A para sacarle el máximo a Xcode.
+  - **[Power and Performance Group Lab](https://developer.apple.com/videos/play/wwdc2026/8003/)** — Q&A sobre los anuncios de potencia y rendimiento.
+  - **[visionOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8004/)** — Q&A sobre los anuncios de visionOS.
+  - **[watchOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8014/)** — Q&A sobre los anuncios de watchOS.
+  - **[Safari and Web Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8015/)** — Q&A sobre los anuncios de Safari y tecnologías web.
+- **Inteligencia, ML y AI**
+  - **[Apple Intelligence Group Lab](https://developer.apple.com/videos/play/wwdc2026/8011/)** — Q&A sobre los anuncios de Apple Intelligence.
+  - **[Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8016/)** — Q&A sobre los anuncios de ML y AI.
+  - **[Coding Intelligence for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8007/)** — Q&A para arrancar con coding intelligence.
+  - **[Coding Intelligence, Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8121/)** — Q&A combinado sobre coding intelligence, ML y AI.
+- **Plataforma, distribución y diseño**
+  - **[Accessibility Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8005/)** — Q&A sobre los anuncios de accesibilidad.
+  - **[Privacy and Security Group Lab](https://developer.apple.com/videos/play/wwdc2026/8009/)** — Q&A sobre los anuncios de privacidad y seguridad.
+  - **[App Store Connect Group Lab](https://developer.apple.com/videos/play/wwdc2026/8010/)** — Q&A sobre los anuncios de App Store Connect.
+  - **[Camera and Photo Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8018/)** — Q&A sobre los anuncios de cámara y fotografía.
+  - **[Icon Composer for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8012/)** — Q&A para arrancar con Icon Composer.
 
 ---
 
@@ -537,14 +498,14 @@ Con este orden me ahorro el caos del catálogo y empiezo a ver resultados desde 
 
 Mi secuencia resumida:
 
-- **Bloque 0** — Keynote, State of the Union y teaser (contexto del año)
-- **Bloque 1** — Swift + Xcode + herramientas (el núcleo)
-- **Bloque 2** — SwiftUI + SwiftData (stack de UI y datos)
-- **Bloque 3** — Foundation Models + evaluaciones (AI de alto nivel)
-- **Bloque 4** — Siri + App Intents (integración con el sistema)
-- **Bloque 5** — Core AI + MLX (modelos y ML)
-- **Bloque 6** — Networking, servicios e infraestructura (mi área)
-- **Bloque 7** — Diseño y accesibilidad (la capa invisible)
+- **Bloque 0** — Las presentaciones
+- **Bloque 1** — Swift y herramientas
+- **Bloque 2** — SwiftUI y persistencia
+- **Bloque 3** — Apple Intelligence y Foundation Models
+- **Bloque 4** — Siri y App Intents
+- **Bloque 5** — Core AI y ML
+- **Bloque 6** — Networking, servicios e infraestructura
+- **Bloque 7** — Diseño y accesibilidad
 - **Bloque 8** — Integración con el sistema
 - **Bloque 9** — Seguridad y administración
 - **Bloque 10** — visionOS, RealityKit y contenido espacial
@@ -554,7 +515,7 @@ Mi secuencia resumida:
 - **Bloque 14** — StoreKit, App Store, suscripciones y Wallet
 - **Bloque 15** — Música, audio y subtítulos
 - **Bloque 16** — Accesibilidad, lectura y texto
-- **Bloque 17** — Group Labs (referencia por tema)
+- **Bloque 17** — Group Labs
 
 Si llevas años viendo el <span class="high">WWDC</span> sabrás que el catálogo nunca caduca — los videos están disponibles todo el año en [developer.apple.com](https://developer.apple.com/videos/all-videos/?collection=wwdc26). Junio es para las novedades, el resto del año para profundizar. Como conté en [WWDC 26](/es/blog/wwdc26/), las sesiones técnicas son el plato fuerte — y ahora ya tengo el menú ordenado.
 
