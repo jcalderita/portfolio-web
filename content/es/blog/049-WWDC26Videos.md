@@ -30,7 +30,10 @@ Dejo fuera solo las versiones en ASL y los recaps (Dub Dub Daily, recap del Stat
 
 ### Bloque 0 — La base
 
-Antes de cualquier sesión técnica, estos dos videos dan el marco del año. Son los que mandan.
+Antes de cualquier sesión técnica, estos videos dan el marco del año. El teaser abre boca; Keynote y State of the Union son los que mandan.
+
+**[Get ready for WWDC26](https://developer.apple.com/videos/play/wwdc2026/394/)**
+El teaser pre-evento de la propia WWDC. Marginal una vez vista la Keynote pero está en el catálogo.
 
 **[Keynote](https://developer.apple.com/videos/play/wwdc2026/101/)**
 El gran anuncio del año. <span class="high">Liquid Glass</span>, <span class="high">Apple Intelligence</span> con la nueva <span class="high">Siri</span>, <span class="high">Xcode 27</span> con <span class="high">agentes de código</span>. No es técnico — es el por qué de todo lo demás.
@@ -67,6 +70,9 @@ Las novedades de <span class="high">Xcode Cloud</span>: arranque simplificado, t
 
 **[Profile, fix, and verify: Improve app responsiveness with Instruments](https://developer.apple.com/videos/play/wwdc2026/268/)**
 Un flujo completo para atacar problemas de rendimiento: <span class="high">Swift Concurrency instrument</span>, <span class="high">Time Profiler</span> y <span class="high">System Trace</span>. Encontrar el cuello de botella, medir la mejora, confirmar el fix.
+
+**[Meet the new MetricKit](https://developer.apple.com/videos/play/wwdc2026/222/)**
+<span class="high">MetricKit</span> renovado con métricas de rendimiento vitales y diagnósticos accionables. Cruzar métricas con estado de la app vía <span class="high">StateReporting framework</span> para tener el cuadro completo de optimización.
 
 **[Migrate to Swift Testing](https://developer.apple.com/videos/play/wwdc2026/267/)**
 Adoptar <span class="high">Swift Testing</span> junto a los XCTests existentes usando interoperabilidad entre frameworks. Patrones para introducir las nuevas capacidades de testing de manera incremental. Conecta con lo que cuento en [SIGBUS](/es/blog/sigbus/).
@@ -187,15 +193,18 @@ Usar el nuevo modelo de Apple en <span class="high">Private Cloud Compute</span>
 
 ---
 
-### Bloque 6 — Swift del lado del servidor
+### Bloque 6 — Networking, servicios e infraestructura
 
-Solo dos videos este año, pero los dos tocan piezas grandes.
+Tres videos que cubren la capa de comunicación y runtime: del cliente al servicio, y de la infraestructura que los corre.
 
 **[Build real-time apps and services with gRPC and Swift](https://developer.apple.com/videos/play/wwdc2026/265/)**
 <span class="high">gRPC Swift</span> para experiencias en tiempo real: el framework RPC open source con streaming bidireccional, construido sobre Swift concurrency. Desde la definición del servicio en <span class="high">Protobuf</span> hasta el despliegue en producción. Los mensajes Protobuf son un 50% más pequeños que JSON y el runtime es moderno y seguro.
 
 **[Discover container machines](https://developer.apple.com/videos/play/wwdc2026/389/)**
 <span class="high">Máquinas contenedor</span> en Apple platforms. Infraestructura para desarrollo y despliegue de servicios Swift.
+
+**[Expand the capabilities of your Virtualization app](https://developer.apple.com/videos/play/wwdc2026/224/)**
+Capacidades nuevas en macOS 27 para apps de <span class="high">Virtualization</span>. Automatización del setup de huéspedes macOS en el primer arranque, passthrough de accesorios USB, topologías de red custom y port forwarding.
 
 ---
 
@@ -218,130 +227,307 @@ Expresar la <span class="high">identidad de marca</span> en iOS con las nuevas h
 **[Refine accessibility for custom controls](https://developer.apple.com/videos/play/wwdc2026/220/)**
 <span class="high">Accesibilidad en controles personalizados</span>. Cómo hacer que lo que construyes funcione para todo el mundo.
 
----
-
-### Bloque 8 — Temas específicos (según proyecto)
-
-Estos videos los veo según lo que tenga entre manos. Los agrupo por área para que cada uno tire del hilo que le toque. La capa de UI del sistema y la de seguridad están aquí porque, aunque importantes, no son universales — dependen del tipo de app que estés construyendo.
-
-**UI del sistema y automatización**
-
-- [Live Activities essentials](https://developer.apple.com/videos/play/wwdc2026/223/) — fundamentos de <span class="high">Live Activities</span>, imprescindible si usas esta API.
-- [WidgetKit foundations](https://developer.apple.com/videos/play/wwdc2026/277/) — fundamentos de <span class="high">WidgetKit</span>.
-- [What's new in Shortcuts](https://developer.apple.com/videos/play/wwdc2026/310/) — novedades en <span class="high">Shortcuts</span> y la automatización del sistema.
-- [LLM search using Core Spotlight](https://developer.apple.com/videos/play/wwdc2026/246/) — búsqueda con LLMs sobre <span class="high">Core Spotlight</span>.
-
-**Seguridad**
-
-- [Secure your app: mitigate risks to agentic features](https://developer.apple.com/videos/play/wwdc2026/347/) — con toda la AI añadida este año, obligatorio si tienes features agénticas.
-- [Secure your apps with App Attest](https://developer.apple.com/videos/play/wwdc2026/201/) — <span class="high">App Attest</span> para verificar la integridad de la app.
-
-**visionOS, RealityKit y contenido espacial**
-
-- [Build next-generation experiences with visionOS 27](https://developer.apple.com/videos/play/wwdc2026/287/)
-- [Explore advances in RealityKit](https://developer.apple.com/videos/play/wwdc2026/279/)
-- [Design immersive environments for visionOS apps and the spatial web](https://developer.apple.com/videos/play/wwdc2026/234/)
-- [Iterate your spatial scenes faster with Reality Composer Pro 3](https://developer.apple.com/videos/play/wwdc2026/280/)
-- [Extend Reality Composer Pro 3 functionality with Xcode](https://developer.apple.com/videos/play/wwdc2026/281/)
-- [Discover the Spatial Preview framework](https://developer.apple.com/videos/play/wwdc2026/282/)
-- [Explore enhancements to visionOS object tracking](https://developer.apple.com/videos/play/wwdc2026/283/)
-- [Collaborate on structured 3D models in visionOS](https://developer.apple.com/videos/play/wwdc2026/284/)
-- [Discover USDKit and what's new in OpenUSD](https://developer.apple.com/videos/play/wwdc2026/285/)
-- [Use foveated streaming to bring immersive content to visionOS](https://developer.apple.com/videos/play/wwdc2026/286/)
-- [Explore immersive website environments in visionOS](https://developer.apple.com/videos/play/wwdc2026/320/)
-- [Supercharge your spatial workflows with Reality Composer Pro 3](https://developer.apple.com/videos/play/wwdc2026/393/)
-
-**Juegos y Metal**
-
-- [Bringing Cyberpunk 2077 to Mac](https://developer.apple.com/videos/play/wwdc2026/356/)
-- [Speedrun your game port with agentic coding](https://developer.apple.com/videos/play/wwdc2026/357/)
-- [Make your game great with touch](https://developer.apple.com/videos/play/wwdc2026/358/)
-- [Build real-time neural rendering pipelines with Metal](https://developer.apple.com/videos/play/wwdc2026/359/)
-- [Find and fix performance issues in your Metal games](https://developer.apple.com/videos/play/wwdc2026/388/)
-
-**Cámara, fotografía e imagen**
-
-- [What's new in image understanding](https://developer.apple.com/videos/play/wwdc2026/237/)
-- [Best practices for integrating visual intelligence in your app](https://developer.apple.com/videos/play/wwdc2026/297/)
-- [Build a responsive camera app that launches quickly](https://developer.apple.com/videos/play/wwdc2026/303/)
-- [Implement high resolution photo capture](https://developer.apple.com/videos/play/wwdc2026/304/)
-- [Enhance RAW image processing with Core Image](https://developer.apple.com/videos/play/wwdc2026/305/)
-- [Support the Center Stage front camera in your iOS app](https://developer.apple.com/videos/play/wwdc2026/341/)
-- [Create high quality images using Image Playground](https://developer.apple.com/videos/play/wwdc2026/375/)
-
-**Web y Safari**
-
-- [What's new in WebKit for Safari 27](https://developer.apple.com/videos/play/wwdc2026/204/)
-- [Get started with the HTML Model Element](https://developer.apple.com/videos/play/wwdc2026/215/)
-- [Create web extensions for Safari](https://developer.apple.com/videos/play/wwdc2026/216/)
-- [Learn CSS Grid Lanes](https://developer.apple.com/videos/play/wwdc2026/314/)
-- [Rediscover the HTML select element](https://developer.apple.com/videos/play/wwdc2026/315/)
-
-**StoreKit, App Store, suscripciones y Wallet**
-
-- [What's new in Apple In-App Purchase](https://developer.apple.com/videos/play/wwdc2026/210/) — novedades en <span class="high">StoreKit</span> para apps con monetización.
-- [Enhance your presence on the App Store](https://developer.apple.com/videos/play/wwdc2026/205/)
-- [What's new in Wallet](https://developer.apple.com/videos/play/wwdc2026/209/)
-- [Explore Retention Messaging in App Store Connect](https://developer.apple.com/videos/play/wwdc2026/309/)
-- [Unlock in-game content with StoreKit and Background Assets](https://developer.apple.com/videos/play/wwdc2026/378/)
-- [Offer subscriptions to groups and organizations](https://developer.apple.com/videos/play/wwdc2026/391/)
-
-**Música, audio y subtítulos**
-
-- [Meet the Music Understanding framework](https://developer.apple.com/videos/play/wwdc2026/253/)
-- [Integrate MusicKit into your app](https://developer.apple.com/videos/play/wwdc2026/254/)
-- [Discover generated subtitles and subtitle styles](https://developer.apple.com/videos/play/wwdc2026/256/)
-- [Meet the Now Playing framework](https://developer.apple.com/videos/play/wwdc2026/312/)
-
-**Accesibilidad, lectura y texto**
-
-- [Enhance the accessibility of your reading app](https://developer.apple.com/videos/play/wwdc2026/219/)
-- [Prepare your tvOS apps for Dynamic Type](https://developer.apple.com/videos/play/wwdc2026/221/)
-- [Elevate your app's text experience with TextKit](https://developer.apple.com/videos/play/wwdc2026/370/)
-- [Unwrap PaperKit](https://developer.apple.com/videos/play/wwdc2026/372/)
-
-**Otros frameworks específicos**
-
-- [Read between the strokes with PencilKit](https://developer.apple.com/videos/play/wwdc2026/203/)
-- [What's new in managing Apple devices](https://developer.apple.com/videos/play/wwdc2026/206/)
-- [Deliver workout insights with HealthKit workout zones](https://developer.apple.com/videos/play/wwdc2026/207/)
-- [Rev up your CarPlay app](https://developer.apple.com/videos/play/wwdc2026/212/)
-- [Meet the new MetricKit](https://developer.apple.com/videos/play/wwdc2026/222/)
-- [Expand the capabilities of your Virtualization app](https://developer.apple.com/videos/play/wwdc2026/224/)
-- [Create live communication experiences](https://developer.apple.com/videos/play/wwdc2026/226/)
-- [What's new in assessment on macOS](https://developer.apple.com/videos/play/wwdc2026/230/)
-- [Design no-code games with Reality Composer Pro 3](https://developer.apple.com/videos/play/wwdc2026/252/)
-- [Modernize your AppKit app](https://developer.apple.com/videos/play/wwdc2026/289/)
-- [Build live production tools for Apple Immersive Video](https://developer.apple.com/videos/play/wwdc2026/338/)
-- [Find your accessory with Bluetooth Channel Sounding](https://developer.apple.com/videos/play/wwdc2026/369/)
-- [Meet Trust Insights](https://developer.apple.com/videos/play/wwdc2026/379/)
-- [Get ready for WWDC26](https://developer.apple.com/videos/play/wwdc2026/394/) — el teaser pre-evento, marginal una vez vista la Keynote pero está en el catálogo.
+**[Modernize your AppKit app](https://developer.apple.com/videos/play/wwdc2026/289/)**
+Modernizar AppKit a las convenciones actuales de macOS. Input con <span class="high">control events</span> y gesture recognizers más allá de tracking loops, navegación por teclado, restauración de estado, y nuevas APIs de corner concentricity para encajar con la estética macOS.
 
 ---
 
-### Bloque 9 — Group Labs
+### Bloque 8 — Integración con el sistema
 
-Las Group Labs originalmente eran espacios de Q&A en directo con ingenieros de Apple. Las listo aquí porque el catálogo las mantiene y conviene tenerlas localizadas para consultar el área en la que estés trabajando.
+Las APIs que ponen mi app dentro del sistema: superficies como Live Activities, widgets, Lock Screen o CarPlay; integración con apps nativas (Workouts), accesorios Bluetooth, y atajos. Si la app vive más allá de su propia ventana, este bloque es relevante.
 
-- [Swift Group Lab](https://developer.apple.com/videos/play/wwdc2026/8001/)
-- [SwiftUI for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8002/)
-- [Power and Performance Group Lab](https://developer.apple.com/videos/play/wwdc2026/8003/)
-- [visionOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8004/)
-- [Accessibility Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8005/)
-- [SwiftUI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8006/)
-- [Coding Intelligence for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8007/)
-- [Privacy and Security Group Lab](https://developer.apple.com/videos/play/wwdc2026/8009/)
-- [App Store Connect Group Lab](https://developer.apple.com/videos/play/wwdc2026/8010/)
-- [Apple Intelligence Group Lab](https://developer.apple.com/videos/play/wwdc2026/8011/)
-- [Icon Composer for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8012/)
-- [Xcode Tips and Tricks Group Lab](https://developer.apple.com/videos/play/wwdc2026/8013/)
-- [watchOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8014/)
-- [Safari and Web Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8015/)
-- [Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8016/)
-- [SwiftData Group Lab](https://developer.apple.com/videos/play/wwdc2026/8017/)
-- [Camera and Photo Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8018/)
-- [SwiftUI Group Lab (segunda tanda)](https://developer.apple.com/videos/play/wwdc2026/8120/)
-- [Coding Intelligence, Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8121/)
+**[Live Activities essentials](https://developer.apple.com/videos/play/wwdc2026/223/)**
+Fundamentos de <span class="high">Live Activities</span>: dónde aparecen, el nuevo estilo de <span class="high">Dynamic Island</span> en landscape, cómo estructurar contenido y datos, y cómo dispararlas en tiempo real con ActivityKit y push notifications. La base si voy a usar esta API.
+
+**[WidgetKit foundations](https://developer.apple.com/videos/play/wwdc2026/277/)**
+Los tipos de widget, qué los hace memorables, y cómo mantenerlos al día. <span class="high">Personalización vía App Intents</span> y estilos dinámicos. Si la app necesita vivir fuera de su icono, empieza aquí.
+
+**[Create live communication experiences](https://developer.apple.com/videos/play/wwdc2026/226/)**
+<span class="high">LiveCommunicationKit</span> transforma apps de comunicación real-time en experiencias integradas. UI de conversación nativa, presentación a pantalla completa en Lock Screen, multitasking con Dynamic Island. Conversaciones entrantes, salientes y de grupo.
+
+**[Rev up your CarPlay app](https://developer.apple.com/videos/play/wwdc2026/212/)**
+Nuevas features para apps de audio, navegación y conversación por voz en <span class="high">CarPlay</span>. Apps de video para reproducir contenido en vehículos compatibles cuando están aparcados. Thumbnails, info de media y controles por voz.
+
+**[Deliver workout insights with HealthKit workout zones](https://developer.apple.com/videos/play/wwdc2026/207/)**
+<span class="high">HealthKit</span> con workout insights —zonas de frecuencia cardiaca y de potencia en ciclismo. Zonas built-in o personalizadas, zona actual y tiempo en cada zona para guiar durante y después del entrenamiento.
+
+**[Find your accessory with Bluetooth Channel Sounding](https://developer.apple.com/videos/play/wwdc2026/369/)**
+<span class="high">Channel Sounding</span> añade distancia y dirección a accesorios Bluetooth. Nuevas APIs de Nearby Interaction y Core Bluetooth y los cambios necesarios en el accesorio. Consumo optimizado sin perder respuesta.
+
+**[What's new in Shortcuts](https://developer.apple.com/videos/play/wwdc2026/310/)**
+Construir atajos con el contenido de la app, nuevas automatizaciones del sistema, y la feature <span class="high">Use Model</span> para refinar cómo se presenta una App Entity a los LLMs. Atajos que almacenan información rica sincronizada entre dispositivos.
+
+**[LLM search using Core Spotlight](https://developer.apple.com/videos/play/wwdc2026/246/)**
+Convertir la búsqueda básica en un sistema <span class="high">RAG</span> con <span class="high">SpotlightSearchTool</span> y LanguageModelSession. Integración con Core Spotlight, hidratación por delegate, PipelineStages para tareas como análisis de sentimiento. Búsqueda contextual real sobre el índice del sistema.
+
+---
+
+### Bloque 9 — Seguridad y administración
+
+Cinco videos que importan más que nunca este año. Con toda la AI añadida, dar por hecho que la integridad de la app, la inyección de prompts o la manipulación del usuario no son problema tuyo es un riesgo. Y para apps que viven en entornos gestionados —educación, empresa, flota— también la postura administrativa importa.
+
+**[Secure your app: mitigate risks to agentic features](https://developer.apple.com/videos/play/wwdc2026/347/)**
+Evaluar amenazas de <span class="high">inyección indirecta de prompts</span>: data exfiltration, acciones no deseadas. Salvaguardas del sistema y buenas prácticas con App Intents y Foundation Models —confirmaciones de usuario, diseño seguro de prompts, autenticación. Obligatorio si tengo features agénticas.
+
+**[Secure your apps with App Attest](https://developer.apple.com/videos/play/wwdc2026/201/)**
+<span class="high">App Attest</span> contra modificación no autorizada y fraude. Cómo los atacantes spoofean datos y saltan checks, y cómo defenderse. Generar y gestionar claves en el <span class="high">Secure Enclave</span>, validar attestations y assertions, y usar la fraud metric para detectar abuso.
+
+**[Meet Trust Insights](https://developer.apple.com/videos/play/wwdc2026/379/)**
+<span class="high">Trust Insights</span> usa ML preservando la privacidad para detectar cuándo alguien podría estar siendo manipulado a acciones de riesgo. Integración, interpretación de señales y diseño de intervenciones que protejan respetando la privacidad.
+
+**[What's new in managing Apple devices](https://developer.apple.com/videos/play/wwdc2026/206/)**
+Updates a <span class="high">declarative device management</span>, Apple Business y Apple School Manager. Streamline de despliegue, refuerzo de seguridad y mejora de la experiencia de la flota gestionada.
+
+**[What's new in assessment on macOS](https://developer.apple.com/videos/play/wwdc2026/230/)**
+<span class="high">Automatic Assessment Configuration</span> en macOS para apps de educación. APIs para crear entornos de examen seguros y configurables que incorporan más features del sistema. Prechecks automáticos y controles de accesibilidad para una experiencia de examen fiable.
+
+---
+
+### Bloque 10 — visionOS, RealityKit y contenido espacial
+
+El bloque más extenso del catálogo. Lo veo solo si trabajo con Vision Pro o si quiero experimentar con escenas espaciales. Si no es mi área, lo dejo para más adelante.
+
+**[Build next-generation experiences with visionOS 27](https://developer.apple.com/videos/play/wwdc2026/287/)**
+El <span class="high">overview de visionOS 27</span>: las distintas vías para construir experiencias —tools nativas de Apple, streaming inmersivo desde Mac o PC, third-party engines, port de apps iOS. Avances en creación de contenido 3D, immersive media y object tracking. El video con el que arrancar el bloque.
+
+**[Explore advances in RealityKit](https://developer.apple.com/videos/play/wwdc2026/279/)**
+Las novedades de <span class="high">RealityKit</span>: simulaciones interactivas de tela, <span class="high">NavMesh</span> pathfinding, iluminación mixed reality, reverb meshes personalizables para audio espacial. Mejor sombreado, character rendering y soporte para <span class="high">Gaussian splatting</span>.
+
+**[Design immersive environments for visionOS apps and the spatial web](https://developer.apple.com/videos/play/wwdc2026/234/)**
+Crear <span class="high">entornos fotorrealistas</span> para apps visionOS, webs y experiencias SharePlay. Principios de diseño, captura de referencias, preparación de assets CG de alta fidelidad y efectos en tiempo real como movimiento e iluminación.
+
+**[Iterate your spatial scenes faster with Reality Composer Pro 3](https://developer.apple.com/videos/play/wwdc2026/280/)**
+Las novedades de <span class="high">Reality Composer Pro 3</span>: contenido, VFX, iluminación e interactividad sin salir del editor. Features asistidas por AI integradas en el flujo. La herramienta donde vivirás si haces contenido espacial.
+
+**[Extend Reality Composer Pro 3 functionality with Xcode](https://developer.apple.com/videos/play/wwdc2026/281/)**
+<span class="high">Plugins</span> específicos del proyecto en Reality Composer Pro 3: componentes custom, sistemas custom, nodos propios de <span class="high">ScriptGraph</span>. Control completo del workflow de autoría espacial.
+
+**[Discover the Spatial Preview framework](https://developer.apple.com/videos/play/wwdc2026/282/)**
+El nuevo <span class="high">Spatial Preview framework</span> envía contenido desde Mac directo a visionOS. Live-syncing y edición bidireccional entre plataformas. La API SpatialPreview, device discovery, integración 2D/3D y nuevas capacidades de Quick Look.
+
+**[Explore enhancements to visionOS object tracking](https://developer.apple.com/videos/play/wwdc2026/283/)**
+Avances en <span class="high">object tracking</span> y accesorios espaciales. Trackear objetos en movimiento y handheld, nuevas clases de accesorios espaciales soportadas, y cómo construir accesorios custom para abrir modelos de interacción únicos.
+
+**[Collaborate on structured 3D models in visionOS](https://developer.apple.com/videos/play/wwdc2026/284/)**
+Modelos 3D estructurados en visionOS: preparación <span class="high">USDZ</span>, manipulación de entidades dentro de ensamblajes jerárquicos, inspección con un plano de corte transversal. Animaciones tipo exploded-view para diseño y colaboración en Vision Pro.
+
+**[Discover USDKit and what's new in OpenUSD](https://developer.apple.com/videos/play/wwdc2026/285/)**
+<span class="high">USDKit</span> en Swift, la nueva API de preview espacial, web espacial mejorado. Updates al estándar <span class="high">OpenUSD</span>: accesibilidad, Gaussian splats, geometría comprimida. Tools de edición y rendering USD ampliadas en Preview para Mac.
+
+**[Use foveated streaming to bring immersive content to visionOS](https://developer.apple.com/videos/play/wwdc2026/286/)**
+<span class="high">Foveated streaming</span>: escenas renderizadas remotamente a Vision Pro en máxima fidelidad. Combina capacidades nativas con streaming third-party de forma inalámbrica, demostrado con una escena <span class="high">OpenXR</span> y NVIDIA CloudXR. Foveated dinámico sin comprometer la privacidad.
+
+**[Explore immersive website environments in visionOS](https://developer.apple.com/videos/play/wwdc2026/320/)**
+La nueva <span class="high">Immersive API</span> en JavaScript transporta visitantes de tu web a entornos virtuales en Vision Pro. Transiciones desde un model element inline, video docking, optimización a escala real. Pocas líneas de código corriendo en la web.
+
+**[Supercharge your spatial workflows with Reality Composer Pro 3](https://developer.apple.com/videos/play/wwdc2026/393/)**
+Interactividad rica y efectos visuales completos dentro de Reality Composer Pro: <span class="high">Shader Graph</span> para materiales, <span class="high">Animation Graph</span> para blending de animaciones esqueléticas, <span class="high">Compute Graph</span> para partículas. Script Graph para interactividad, Sequencer para eventos y Behavior Trees para NPCs.
+
+**[Build live production tools for Apple Immersive Video](https://developer.apple.com/videos/play/wwdc2026/338/)**
+Producción en directo de <span class="high">Apple Immersive Video</span>. Empaquetar video inmersivo, audio espacial y metadata de escena para transporte sobre IP con el estándar <span class="high">SMPTE 2110</span>. Immersive Media Support, Video Toolbox y AVFoundation para flujos en tiempo real.
+
+---
+
+### Bloque 11 — Juegos y Metal
+
+Si trabajo en un juego, este bloque es parada obligada. Si no, lo veo por curiosidad porque hay piezas de rendimiento que aplican también a apps no-juego.
+
+**[Bringing Cyberpunk 2077 to Mac](https://developer.apple.com/videos/play/wwdc2026/356/)**
+Cómo CD PROJEKT RED llevó <span class="high">Cyberpunk 2077 a Mac</span> aprovechando hardware, software y tools de Apple. Técnicas aplicables a otros juegos. El preset <span class="high">For this Mac</span> que optimiza settings automáticamente para balancear fidelidad visual y framerate en toda la línea Mac.
+
+**[Speedrun your game port with agentic coding](https://developer.apple.com/videos/play/wwdc2026/357/)**
+Las nuevas <span class="high">skills agénticas</span> del Game Porting Toolkit 4 aceleran el port. Adoptar <span class="high">Metal 4</span>, integrar <span class="high">MetalFX</span>, tune del juego para hardware Apple. Agentes que diagnostican issues de GPU rendering autónomamente.
+
+**[Make your game great with touch](https://developer.apple.com/videos/play/wwdc2026/358/)**
+Controles touch convincentes para juegos. Insights de devs indie a AAA, buenas prácticas, y cómo aprovechar el <span class="high">Touch Controller framework</span> y Metal para rendimiento óptimo.
+
+**[Design no-code games with Reality Composer Pro 3](https://developer.apple.com/videos/play/wwdc2026/252/)**
+<span class="high">ScriptGraph</span> en Reality Composer Pro 3 para contenido 3D no-code. Nodos visuales para animaciones, momentos interactivos, e integración con SwiftUI para añadir bocadillos y UI a la experiencia.
+
+**[Build real-time neural rendering pipelines with Metal](https://developer.apple.com/videos/play/wwdc2026/359/)**
+ML integrado en el pipeline de rendering con <span class="high">Metal 4</span>. <span class="high">MetalFX neural denoising</span> con insights de Maxon Redshift Live. Entrenar y desplegar un neural tone mapper inline con el ML command encoder, y la nueva tensor API para redes pequeñas dentro de tus shaders.
+
+**[Find and fix performance issues in your Metal games](https://developer.apple.com/videos/play/wwdc2026/388/)**
+Caza de problemas de rendimiento con tools de Metal: <span class="high">Game Performance Overview</span> en Instruments, traces en background con metalperftrace y Control Center, y la nueva <span class="high">StateReporting API</span> para correlar métricas con el estado runtime del juego. Horas de telemetría convertidas en insights accionables.
+
+---
+
+### Bloque 12 — Cámara, fotografía e imagen
+
+Para apps con cámara o procesamiento de imagen. Algunos videos son muy específicos (RAW, Center Stage), otros aplican incluso si solo despliego un preview.
+
+**[What's new in image understanding](https://developer.apple.com/videos/play/wwdc2026/237/)**
+Vision framework y Foundation Models actualizados. La nueva request <span class="high">tap-to-segment</span> para segmentar imágenes, Vision en watchOS, y soporte de imágenes en el Apple Foundation Model combinado con OCR, escaneo de barcodes y tools propias.
+
+**[Best practices for integrating visual intelligence in your app](https://developer.apple.com/videos/play/wwdc2026/297/)**
+Cómo <span class="high">Visual Intelligence</span> transforma el descubrimiento de contenido. Definir entidades, procesar imágenes, manejar múltiples tipos de resultado. Optimización de velocidad y relevancia, e intents para acciones directas como abrir o reproducir contenido con un tap.
+
+**[Build a responsive camera app that launches quickly](https://developer.apple.com/videos/play/wwdc2026/303/)**
+Optimizar la secuencia completa de arranque de la cámara —desde el startup hasta el <span class="high">primer frame de preview</span>. Nuevas APIs para lanzamientos más rápidos, rendering fluido y rendimiento sostenido. Para que la gente nunca se pierda el momento.
+
+**[Implement high resolution photo capture](https://developer.apple.com/videos/play/wwdc2026/304/)**
+Captura de fotos en alta resolución con AVFoundation. Las tres opciones —<span class="high">RAW</span>, <span class="high">exposure-bracketed</span>, <span class="high">fully processed</span>— y cuándo usar cada una. Configurar captura de 24MP y 48MP en cámaras Main, Tele y Ultra Wide. Deferred photo processing para que la app responda incluso con disparos rápidos.
+
+**[Enhance RAW image processing with Core Image](https://developer.apple.com/videos/play/wwdc2026/305/)**
+La versión 9 de las APIs RAW de <span class="high">Core Image</span>: más nitidez, color más definido, Apple Neural Engine para rendimiento. <span class="high">CIRAWFilter</span> para editar exposición, ruido, sharpness y contraste. Nuevas CIImageProcessor APIs con control fino sobre tile sizing y buffers.
+
+**[Support the Center Stage front camera in your iOS app](https://developer.apple.com/videos/play/wwdc2026/341/)**
+<span class="high">Center Stage</span> con AVCapture APIs en la cámara frontal de iPhone 17, 17 Pro y Air. Zoom y rotate, framing flexible para selfies y videos, todos en el encuadre en fotos de grupo. Integración en videollamadas con auto-framing y estabilización en tiempo real.
+
+**[Create high quality images using Image Playground](https://developer.apple.com/videos/play/wwdc2026/375/)**
+Generación de imágenes con <span class="high">Image Playground</span>. Modelo generativo en <span class="high">Private Cloud Compute</span>, imágenes en casi cualquier estilo incluyendo fotorrealista, dimensiones específicas, y modificación mediante lenguaje natural y touch.
+
+---
+
+### Bloque 13 — Web y Safari
+
+Para web devs: las novedades de WebKit y nuevas piezas de CSS y HTML que Safari estrena este año.
+
+**[What's new in WebKit for Safari 27](https://developer.apple.com/videos/play/wwdc2026/204/)**
+El overview de WebKit y <span class="high">Safari 27</span>: Grid Lanes, Customizable Select, HTML Model, Immersive Environments, lo último de Web Extensions. Más de 1.000 mejoras del engine para hacer la web más fiable.
+
+**[Get started with the HTML Model Element](https://developer.apple.com/videos/play/wwdc2026/215/)**
+El <span class="high">model element</span> trae contenido 3D interactivo a webs en iOS, iPadOS, macOS y visionOS. Tools para crear y optimizar assets 3D, features del model element, y hacia dónde van los web standards en 3D.
+
+**[Create web extensions for Safari](https://developer.apple.com/videos/play/wwdc2026/216/)**
+Construir y probar <span class="high">web extensions</span> de Safari desde cero —sin Xcode. Content blocking, modificación de páginas, native messaging y el permissions mode trabajando juntos para una experiencia potente y respetuosa con la privacidad.
+
+**[Learn CSS Grid Lanes](https://developer.apple.com/videos/play/wwdc2026/314/)**
+<span class="high">Grid Lanes</span> para layouts web adaptables con elementos de formas variadas. CSS limpio y flexible, y <span class="high">flow-tolerance</span> para refinar accesibilidad sin perder maleabilidad.
+
+**[Rediscover the HTML select element](https://developer.apple.com/videos/play/wwdc2026/315/)**
+Control total del estilo en select menus web. Nuevo valor CSS <span class="high">appearance</span> y nuevos pseudo-elementos, contenido rico dentro de options con nuevas posibilidades HTML. Selects a medida del design system sin renunciar a accesibilidad ni robustez.
+
+---
+
+### Bloque 14 — StoreKit, App Store, suscripciones y Wallet
+
+Para todo lo que toca monetización y App Store Connect. Si vendo algo en mi app, este bloque importa.
+
+**[What's new in Apple In-App Purchase](https://developer.apple.com/videos/play/wwdc2026/210/)**
+Las nuevas <span class="high">suscripciones mensuales con compromiso a 12 meses</span> como opción más asequible. Configurar y testear con App Store Connect, StoreKit APIs y Xcode testing. Mejoras en redención de offer codes y en la experiencia de App Review.
+
+**[Enhance your presence on the App Store](https://developer.apple.com/videos/play/wwdc2026/205/)**
+Reimaginar el marketing en el App Store usando imágenes y videos en nuevos lugares. Placements visuales nuevos en product page, resultados de búsqueda y campañas de Apple Ads. El nuevo <span class="high">Asset Library</span> centraliza assets y un tool permite ver la product page antes de publicarla.
+
+**[What's new in Wallet](https://developer.apple.com/videos/play/wwdc2026/209/)**
+Nuevos estilos de pase para diseños ricos. Nuevos formatos de barcode y una API flexible de pass actions. <span class="high">Pass Designer</span> y <span class="high">Pass Builder</span> simplifican diseñar, personalizar y distribuir pases a escala.
+
+**[Explore Retention Messaging in App Store Connect](https://developer.apple.com/videos/play/wwdc2026/309/)**
+<span class="high">Retention Messaging</span> para alcanzar suscriptores antes de que cancelen. Configurar en App Store Connect, añadir subscription offers, y usar la API para mensajería en tiempo real y alternativas que animen a quedarse.
+
+**[Unlock in-game content with StoreKit and Background Assets](https://developer.apple.com/videos/play/wwdc2026/378/)**
+In-App Purchases nativas en Unity con el nuevo <span class="high">StoreKit plug-in</span>. Reducción del tamaño de descarga con <span class="high">Background Assets plug-in</span> entregando packs por idioma. Y un Steam Asset Converter para migrar builds existentes.
+
+**[Offer subscriptions to groups and organizations](https://developer.apple.com/videos/play/wwdc2026/391/)**
+<span class="high">Group Purchases</span>: un suscriptor compra varios asientos e invita a otros desde la app. <span class="high">Volume Purchasing</span> vía Apple Business y Apple School Manager pone tus suscripciones delante de compradores enterprise y educación que ya compran apps a escala.
+
+---
+
+### Bloque 15 — Música, audio y subtítulos
+
+Para apps con contenido multimedia. Hay un framework nuevo este año (<span class="high">Music Understanding</span>) que merece atención incluso si no haces apps de música.
+
+**[Meet the Music Understanding framework](https://developer.apple.com/videos/play/wwdc2026/253/)**
+Nuevo framework <span class="high">Music Understanding</span> que analiza audio en seis dimensiones, on-device: clave, ritmo, estructura, pace, actividad instrumental y loudness. Y un sample app, Music Understanding Lab, para visualizar resultados.
+
+**[Integrate MusicKit into your app](https://developer.apple.com/videos/play/wwdc2026/254/)**
+Apple Music dentro de tu app con <span class="high">MusicKit</span>. Autorización, suscripción, selección de música, control de playback y compartir canciones entre storefronts. Nuevo <span class="high">Music Picker</span> para navegar el catálogo y librerías personales. Diferencias entre SystemMusicPlayer y ApplicationMusicPlayer.
+
+**[Discover generated subtitles and subtitle styles](https://developer.apple.com/videos/play/wwdc2026/256/)**
+<span class="high">Subtítulos generados</span> on-device que transcriben o traducen desde otro idioma. Caption style preview para personalizar y previsualizar durante el playback. Implementación con AVKit, AVPlayerLayer y Media Accessibility.
+
+**[Meet the Now Playing framework](https://developer.apple.com/videos/play/wwdc2026/312/)**
+Nuevo framework Swift <span class="high">Now Playing</span> que conecta el playback de tu app con las superficies del sistema: Lock Screen, Control Center, Dynamic Island, CarPlay. Publicar estado, responder a comandos vía API observable, y <span class="high">remote playback sessions</span> para representar media en dispositivos externos.
+
+---
+
+### Bloque 16 — Accesibilidad, lectura y texto
+
+La capa del texto y la lectura. Aquí no es solo APIs nuevas — es cómo encaja la app con las preferencias de cada persona.
+
+**[Enhance the accessibility of your reading app](https://developer.apple.com/videos/play/wwdc2026/219/)**
+Experiencias de lectura robustas para <span class="high">VoiceOver</span> y <span class="high">Speak Screen</span>. Selección de texto intuitiva, navegación clara entre líneas y párrafos, y lectura continua entre elementos y entre páginas.
+
+**[Prepare your tvOS apps for Dynamic Type](https://developer.apple.com/videos/play/wwdc2026/221/)**
+<span class="high">Dynamic Type</span> en tvOS: implementar escalado de fuentes, adaptar layouts para tamaños grandes, optimizar grids y carousels media-focused. Para que cualquier tamaño de texto siga siendo cómodo.
+
+**[Elevate your app's text experience with TextKit](https://developer.apple.com/videos/play/wwdc2026/370/)**
+Combinar la conveniencia de los text views built-in con el control de <span class="high">TextKit</span>. Nuevas APIs para extender UITextView y NSTextView con comportamientos custom como números de línea o secciones colapsables. Arquitectura TextKit, caching y políticas de reuse para text attachments.
+
+**[Unwrap PaperKit](https://developer.apple.com/videos/play/wwdc2026/372/)**
+Aplicaciones canvas-based con <span class="high">PaperKit</span>. APIs nuevas del data model para acceder, crear y modificar elementos de markup. Controles custom, anotaciones, y buenas prácticas para integrar un canvas creativo completo.
+
+**[Read between the strokes with PencilKit](https://developer.apple.com/videos/play/wwdc2026/203/)**
+Reconocimiento de escritura a mano con la misma tecnología detrás de Freeform y Notes. Reconocimiento en muchos alfabetos e idiomas, y nuevas capacidades para integrar <span class="high">PencilKit</span> en más tipos de apps.
+
+---
+
+### Bloque 17 — Group Labs
+
+Las Group Labs eran sesiones de Q&A en directo con ingenieros y diseñadores de Apple durante la semana del evento. Apple las mantiene en el catálogo aunque la sesión interactiva ya pasara, así que sirven como referencia rápida del área en la que esté trabajando. Las descripciones oficiales son prácticamente la misma boilerplate, así que las agrupo por tema con una línea de contexto.
+
+**Núcleo del lenguaje y frameworks principales**
+
+**[Swift Group Lab](https://developer.apple.com/videos/play/wwdc2026/8001/)**
+Q&A sobre los anuncios de Swift de la semana.
+
+**[SwiftUI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8006/)** y **[SwiftUI Group Lab (segunda tanda)](https://developer.apple.com/videos/play/wwdc2026/8120/)**
+Dos sesiones de Q&A sobre los anuncios de SwiftUI.
+
+**[SwiftUI for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8002/)**
+Q&A para arrancar con SwiftUI desde cero.
+
+**[SwiftData Group Lab](https://developer.apple.com/videos/play/wwdc2026/8017/)**
+Q&A sobre los anuncios de SwiftData.
+
+**Xcode, rendimiento y plataformas**
+
+**[Xcode Tips and Tricks Group Lab](https://developer.apple.com/videos/play/wwdc2026/8013/)**
+Q&A para sacarle el máximo a Xcode.
+
+**[Power and Performance Group Lab](https://developer.apple.com/videos/play/wwdc2026/8003/)**
+Q&A sobre los anuncios de potencia y rendimiento.
+
+**[visionOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8004/)**
+Q&A sobre los anuncios de visionOS.
+
+**[watchOS Group Lab](https://developer.apple.com/videos/play/wwdc2026/8014/)**
+Q&A sobre los anuncios de watchOS.
+
+**[Safari and Web Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8015/)**
+Q&A sobre los anuncios de Safari y tecnologías web.
+
+**Inteligencia, ML y AI**
+
+**[Apple Intelligence Group Lab](https://developer.apple.com/videos/play/wwdc2026/8011/)**
+Q&A sobre los anuncios de Apple Intelligence.
+
+**[Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8016/)**
+Q&A sobre los anuncios de ML y AI.
+
+**[Coding Intelligence for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8007/)**
+Q&A para arrancar con coding intelligence.
+
+**[Coding Intelligence, Machine Learning & AI Group Lab](https://developer.apple.com/videos/play/wwdc2026/8121/)**
+Q&A combinado sobre coding intelligence, ML y AI.
+
+**Plataforma, distribución y diseño**
+
+**[Accessibility Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8005/)**
+Q&A sobre los anuncios de accesibilidad.
+
+**[Privacy and Security Group Lab](https://developer.apple.com/videos/play/wwdc2026/8009/)**
+Q&A sobre los anuncios de privacidad y seguridad.
+
+**[App Store Connect Group Lab](https://developer.apple.com/videos/play/wwdc2026/8010/)**
+Q&A sobre los anuncios de App Store Connect.
+
+**[Camera and Photo Technologies Group Lab](https://developer.apple.com/videos/play/wwdc2026/8018/)**
+Q&A sobre los anuncios de cámara y fotografía.
+
+**[Icon Composer for Beginners Group Lab](https://developer.apple.com/videos/play/wwdc2026/8012/)**
+Q&A para arrancar con Icon Composer.
 
 ---
 
@@ -351,16 +537,24 @@ Con este orden me ahorro el caos del catálogo y empiezo a ver resultados desde 
 
 Mi secuencia resumida:
 
-- **Bloque 0** — Keynote + State of the Union (contexto del año)
+- **Bloque 0** — Keynote, State of the Union y teaser (contexto del año)
 - **Bloque 1** — Swift + Xcode + herramientas (el núcleo)
 - **Bloque 2** — SwiftUI + SwiftData (stack de UI y datos)
 - **Bloque 3** — Foundation Models + evaluaciones (AI de alto nivel)
 - **Bloque 4** — Siri + App Intents (integración con el sistema)
 - **Bloque 5** — Core AI + MLX (modelos y ML)
-- **Bloque 6** — Swift en servidor (mi área)
+- **Bloque 6** — Networking, servicios e infraestructura (mi área)
 - **Bloque 7** — Diseño y accesibilidad (la capa invisible)
-- **Bloque 8** — Específicos según proyecto, agrupados por área (cuando aplique)
-- **Bloque 9** — Group Labs (referencia por tema)
+- **Bloque 8** — Integración con el sistema
+- **Bloque 9** — Seguridad y administración
+- **Bloque 10** — visionOS, RealityKit y contenido espacial
+- **Bloque 11** — Juegos y Metal
+- **Bloque 12** — Cámara, fotografía e imagen
+- **Bloque 13** — Web y Safari
+- **Bloque 14** — StoreKit, App Store, suscripciones y Wallet
+- **Bloque 15** — Música, audio y subtítulos
+- **Bloque 16** — Accesibilidad, lectura y texto
+- **Bloque 17** — Group Labs (referencia por tema)
 
 Si llevas años viendo el <span class="high">WWDC</span> sabrás que el catálogo nunca caduca — los videos están disponibles todo el año en [developer.apple.com](https://developer.apple.com/videos/all-videos/?collection=wwdc26). Junio es para las novedades, el resto del año para profundizar. Como conté en [WWDC 26](/es/blog/wwdc26/), las sesiones técnicas son el plato fuerte — y ahora ya tengo el menú ordenado.
 
