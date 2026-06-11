@@ -1,7 +1,7 @@
 ---
 title: SymLink
 slug: symlink
-date: 2026-07-29
+date: 2026-08-05
 description: Cómo uso symlinks para compartir configuración de Claude entre equipos y máquinas sin exponer archivos privados en repositorios públicos.
 tags: AI, Shell
 cover: SymLink

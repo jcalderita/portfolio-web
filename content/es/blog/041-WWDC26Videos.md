@@ -1,7 +1,7 @@
 ---
 title: WWDC26 Videos
 slug: wwdc26-videos
-date: 2026-08-12
+date: 2026-06-11
 description: Más de cien sesiones de WWDC26 y ningún orden oficial. Aquí está mi guía personal para verlas agrupadas y con coherencia, empezando por lo que más importa.
 tags: Swift, Conference
 cover: WWDC26Videos
@@ -11,11 +11,11 @@ publish: true
 ---
 ## Mi Problema 🤔
 
-Cada año el mismo ritual: el lunes después de la Keynote abro [developer.apple.com/videos](https://developer.apple.com/videos/all-videos/?collection=wwdc26) y me encuentro con más de cien sesiones. Sin orden de reproducción sugerido. Sin camino claro. Solo un catálogo enorme donde todo parece igual de importante.
+Cada año el mismo ritual: el lunes después de la Keynote abro los videos de la [WWDC26](https://developer.apple.com/videos/all-videos/?collection=wwdc26) y me encuentro con más de cien sesiones. Apple ofrece filtros por tema, plataforma y framework que se pueden ir acumulando hasta dejar el catálogo a tu medida — una base estupenda para arrancar.
 
-El problema no es el contenido — es que sin estructura, lo que acaba pasando es que empiezo a saltar de video en video según el título que más me llame en ese momento. Veo algo de <span class="high">SwiftUI</span>, luego salto a <span class="high">AI</span>, luego me pongo con herramientas, y al final del día he consumido cinco sesiones inconexas que no se refuerzan entre sí. La comprensión es superficial porque cada bloque temático necesita contexto previo que no tengo.
+Lo que me pasa a mí es que, incluso con esos filtros activos, si no me marco un orden propio acabo saltando de video en video según el título que más me llame en ese momento. Veo algo de <span class="high">SwiftUI</span>, luego salto a <span class="high">AI</span>, luego me pongo con herramientas, y al final del día he consumido cinco sesiones inconexas que no se refuerzan entre sí. La comprensión es superficial porque cada bloque temático necesita contexto previo que no tengo.
 
-Llevo tiempo queriéndome armar un orden propio. Un camino que tenga sentido, que construya el conocimiento de manera acumulativa, y que ponga primero lo que da contexto para todo lo demás.
+Llevo tiempo queriéndome armar mi propio esquema sobre lo que Apple ofrece. Un camino con sentido, que construya el conocimiento de manera acumulativa, que ponga primero lo que da contexto para todo lo demás — y que me sirva también como checklist para tachar bloques a medida que avanzo durante el año.
 
 Este año lo he hecho.
 
@@ -25,6 +25,8 @@ Este año lo he hecho.
 Mi criterio es simple: **primero la visión general, luego el núcleo del lenguaje, después las herramientas, y al final las áreas específicas según lo que más use en mi trabajo**. Cada bloque prepara el terreno para el siguiente.
 
 Dejo fuera solo las versiones en ASL y los recaps (Dub Dub Daily, recap del State of the Union). Todo lo demás entra — incluso los Group Labs, que aunque eran sesiones interactivas en directo Apple los mantiene en el catálogo y los dejo localizados al final por si necesitas referencia del tema.
+
+Lo que viene a continuación es la agrupación que uso yo, y que voy tachando bloque a bloque a lo largo del año. Si te sirve, hazla tuya: lo que importa es tener un camino que seguir, no que sea el mío.
 
 ---
 
@@ -494,7 +496,7 @@ Las Group Labs eran sesiones de Q&A en directo con ingenieros y diseñadores de 
 
 ## Mi Resultado 🎯
 
-Con este orden me ahorro el caos del catálogo y empiezo a ver resultados desde la primera semana. La clave es el bloque 0 y el 1: sin ese contexto, el resto no tiene el mismo peso. Y el bloque de <span class="high">Foundation Models</span> es, para mí, el más importante de este WWDC — Apple ha puesto mucho aquí y los frameworks están maduros.
+Con este orden me ahorro el caos del catálogo y empiezo a ver resultados desde la primera semana.
 
 Mi secuencia resumida:
 
@@ -517,7 +519,7 @@ Mi secuencia resumida:
 - **Bloque 16** — Accesibilidad, lectura y texto
 - **Bloque 17** — Group Labs
 
-Si llevas años viendo el <span class="high">WWDC</span> sabrás que el catálogo nunca caduca — los videos están disponibles todo el año en [developer.apple.com](https://developer.apple.com/videos/all-videos/?collection=wwdc26). Junio es para las novedades, el resto del año para profundizar. Como conté en [WWDC 26](/es/blog/wwdc26/), las sesiones técnicas son el plato fuerte — y ahora ya tengo el menú ordenado.
+Si llevas años viendo el <span class="high">WWDC</span> sabrás que el catálogo nunca caduca — los videos están disponibles todo el año en [developer.apple.com](https://developer.apple.com/videos/all-videos/?collection=wwdc26). Junio es para las novedades, el resto del año para profundizar. Como conté en [WWDC 26](/es/blog/wwdc26/), las sesiones técnicas son el plato fuerte — y ahora ya tengo mi propia checklist por la que ir tachando.
 
 **Keep coding, keep running** 🏃‍♂️
 

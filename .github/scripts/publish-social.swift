@@ -162,7 +162,7 @@ struct LinkedInPost {
         self.locale = locale
 
         let hashtags = fm.tags.map { "#\($0)" }.joined(separator: " ")
-        self.text = "\(fm.excerpt)\n\n\(hashtags)"
+        self.text = "\(fm.description)\n\n\(fm.excerpt)\n\n\(hashtags)"
         self.url = locale == "es"
             ? "https://jcalderita.com/es/blog/\(slug)/"
             : "https://jcalderita.com/blog/\(slug)/"

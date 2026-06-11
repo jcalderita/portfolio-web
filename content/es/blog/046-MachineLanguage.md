@@ -1,7 +1,7 @@
 ---
 title: Machine Language
 slug: machine-language
-date: 2026-07-15
+date: 2026-07-22
 description: Cómo los dispositivos se comunican entre ellos en el mundo de la IA y por qué el output compacto con jq -c ahorra tokens sin perder información.
 tags: AI, Shell
 cover: MachineLanguage

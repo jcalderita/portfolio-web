@@ -1,7 +1,7 @@
 ---
 title: Model Parts
 slug: model-parts
-date: 2026-07-01
+date: 2026-07-08
 description: Cómo centralizar índices, claves foráneas y restricciones únicas en el propio modelo para que las migraciones y los tests hablen el mismo idioma.
 tags: Swift, Server, DataBase
 cover: ModelParts

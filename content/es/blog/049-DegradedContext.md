@@ -1,7 +1,7 @@
 ---
 title: Degraded Context
 slug: degraded-context
-date: 2026-08-05
+date: 2026-08-12
 description: Por qué el contexto de la IA se degrada con el uso y cómo mantener límites claros que preservan la calidad de respuesta y la velocidad del modelo.
 tags: AI, Shell
 cover: DegradedContext
