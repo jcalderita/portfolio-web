@@ -2,7 +2,7 @@
 title: WWDC26 Videos
 slug: wwdc26-videos
 date: 2026-06-11
-description: Más de cien sesiones de WWDC26 y ningún orden oficial. Aquí está mi guía personal para verlas agrupadas y con coherencia, empezando por lo que más importa.
+description: WWDC26 publica más de cien sesiones. Me he armado mi propia agrupación y checklist para verlas en mi orden y tachar bloques a lo largo del año.
 tags: Swift, Conference
 cover: WWDC26Videos
 coverDescription: Jorge de pie frente a una pizarra negra escribiendo "WWDC 26 - Videos" con una secuencia numerada de iconos que representan un flujo de once pasos con flechas, mientras por la ventana se ve un parque con corredores y cielo azul.
