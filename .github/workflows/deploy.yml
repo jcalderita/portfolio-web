@@ -28,6 +28,9 @@ jobs:
           path: .build
           key: spm-${{ hashFiles('Package.resolved') }}
 
+      - name: Install cwebp
+        run: brew install webp
+
       - name: Build Swift package
         run: swift build -c release
 

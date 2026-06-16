@@ -1,83 +1,80 @@
 import Foundation
 
-// MARK: - JSON escape
+// MARK: - Schemas
 
-private func jsonEscape(_ string: String) -> String {
-    string
-        .replacing("\\", with: "\\\\")
-        .replacing("\"", with: "\\\"")
-        .replacing("\n", with: "\\n")
-        .replacing("\r", with: "\\r")
-        .replacing("\t", with: "\\t")
+private struct PersonLD: Encodable {
+    let context = "https://schema.org"
+    let type = "Person"
+    let name: String
+    let jobTitle: String
+    let description: String
+    let url: String
+    let image: String
+    let sameAs: [String]
+    let email: String
+    let knowsAbout: [String]
+    enum CodingKeys: String, CodingKey {
+        case context = "@context", type = "@type"
+        case name, jobTitle, description, url, image, sameAs, email, knowsAbout
+    }
 }
 
-// MARK: - Person (home page)
+private struct PersonRef: Encodable {
+    let type = "Person"
+    let name: String
+    let url: String
+    enum CodingKeys: String, CodingKey { case type = "@type", name, url }
+}
+
+private struct BlogPostingLD: Encodable {
+    let context = "https://schema.org"
+    let type = "BlogPosting"
+    let headline: String
+    let description: String
+    let datePublished: Date
+    let url: String
+    let image: String
+    let author: PersonRef
+    let publisher: PersonRef
+    let keywords: [String]
+    let inLanguage: String
+    enum CodingKeys: String, CodingKey {
+        case context = "@context", type = "@type"
+        case headline, description, datePublished, url, image, author, publisher, keywords, inLanguage
+    }
+}
+
+// MARK: - Encoding
+
+private func encodeJSONLD<T: Encodable>(_ value: T) -> String {
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+    encoder.dateEncodingStrategy = .iso8601
+    guard let data = try? encoder.encode(value) else { return "{}" }
+    return String(decoding: data, as: UTF8.self)
+}
+
+// MARK: - Builders
 
 func buildPersonJsonLD(
-    name: String,
-    jobTitle: String,
-    description: String,
-    url: String,
-    sameAs: [String],
-    email: String,
-    knowsAbout: [String]
+    name: String, jobTitle: String, description: String, url: String,
+    sameAs: [String], email: String, knowsAbout: [String]
 ) -> String {
-    let sameAsItems = sameAs.map { "\"\(jsonEscape($0))\"" }.joined(separator: ", ")
-    let knowsItems = knowsAbout.map { "\"\(jsonEscape($0))\"" }.joined(separator: ", ")
-
-    return """
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "\(jsonEscape(name))",
-      "jobTitle": "\(jsonEscape(jobTitle))",
-      "description": "\(jsonEscape(description))",
-      "url": "\(jsonEscape(url))",
-      "image": "\(jsonEscape(url))/static/web.webp",
-      "sameAs": [\(sameAsItems)],
-      "email": "\(jsonEscape(email))",
-      "knowsAbout": [\(knowsItems)]
-    }
-    """
+    encodeJSONLD(PersonLD(
+        name: name, jobTitle: jobTitle, description: description, url: url,
+        image: "\(url)/static/web.webp", sameAs: sameAs, email: email, knowsAbout: knowsAbout
+    ))
 }
 
-// MARK: - BlogPosting (blog posts)
-
 func buildBlogPostingJsonLD(
-    headline: String,
-    description: String,
-    datePublished: Date,
-    url: String,
-    imageURL: String,
-    authorName: String,
-    authorURL: String,
-    keywords: [String],
-    inLanguage: String
+    headline: String, description: String, datePublished: Date, url: String,
+    imageURL: String, authorName: String, authorURL: String,
+    keywords: [String], inLanguage: String
 ) -> String {
-    let keywordItems = keywords.map { "\"\(jsonEscape($0))\"" }.joined(separator: ", ")
-    let dateString = iso8601Formatter.string(from: datePublished)
-
-    return """
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "\(jsonEscape(headline))",
-      "description": "\(jsonEscape(description))",
-      "datePublished": "\(dateString)",
-      "url": "\(jsonEscape(url))",
-      "image": "\(jsonEscape(imageURL))",
-      "author": {
-        "@type": "Person",
-        "name": "\(jsonEscape(authorName))",
-        "url": "\(jsonEscape(authorURL))"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "\(jsonEscape(authorName))",
-        "url": "\(jsonEscape(authorURL))"
-      },
-      "keywords": [\(keywordItems)],
-      "inLanguage": "\(jsonEscape(inLanguage))"
-    }
-    """
+    let person = PersonRef(name: authorName, url: authorURL)
+    return encodeJSONLD(BlogPostingLD(
+        headline: headline, description: description, datePublished: datePublished,
+        url: url, image: imageURL, author: person, publisher: person,
+        keywords: keywords, inLanguage: inLanguage
+    ))
 }

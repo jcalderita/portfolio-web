@@ -58,14 +58,7 @@ func renderDiploma(code: String, alt: String, locale: Locale) -> Node {
                 "onclick": "this.nextElementSibling.showModal()",
             ]
         ) {
-            img(
-                class: "diplomaThumbImg",
-                customAttributes: [
-                    "src": "/static/diplomas/\(code).png",
-                    "alt": alt,
-                    "loading": "lazy",
-                ]
-            )
+            diplomaImg(code: code, alt: alt, cssClass: "diplomaThumbImg")
         }
         dialog(
             class: "diplomaModal",
@@ -79,17 +72,21 @@ func renderDiploma(code: String, alt: String, locale: Locale) -> Node {
                     "onclick": "this.closest('dialog').close()",
                 ]
             ) {
-                img(
-                    class: "diplomaModalImg",
-                    customAttributes: [
-                        "src": "/static/diplomas/\(code).png",
-                        "alt": alt,
-                        "loading": "lazy",
-                    ]
-                )
+                diplomaImg(code: code, alt: alt, cssClass: "diplomaModalImg")
             }
         }
     }
+}
+
+private func diplomaImg(code: String, alt: String, cssClass: String) -> Node {
+    img(
+        class: cssClass,
+        customAttributes: [
+            "src": "/static/diplomas/\(code).png",
+            "alt": alt,
+            "loading": "lazy",
+        ]
+    )
 }
 
 // MARK: - Projects
@@ -153,6 +150,17 @@ func renderBackButton(locale: Locale) -> Node {
         ]
     ) {
         Node.raw(chevronLeftSVG)
+    }
+}
+
+// MARK: - Blog bottom bar
+
+func renderBlogBottom(locale: Locale) -> Node {
+    div(class: "blogBottom") {
+        div(class: "blogBackButton") {
+            renderBackButton(locale: locale)
+        }
+        renderUpButton(locale: locale)
     }
 }
 

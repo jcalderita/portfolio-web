@@ -2,11 +2,33 @@ import Foundation
 import HTML
 import Saga
 
+// MARK: - Cover image
+
+func renderCover(
+    metadata: BlogMetadata,
+    cssClass: String? = nil,
+    extraAttributes: [String: String] = [:]
+) -> Node {
+    func attrs(_ name: String) -> [String: String] {
+        extraAttributes.merging(["src": "/static/blog/\(name).webp", "alt": metadata.coverDescription]) { _, new in new }
+    }
+    let lightName = "\(metadata.cover)Light"
+    guard FileManager.default.fileExists(atPath: "content/static/blog/\(lightName).webp") else {
+        return img(class: cssClass, customAttributes: attrs(metadata.cover))
+    }
+    func cls(_ variant: String) -> String {
+        [cssClass, variant].compactMap(\.self).joined(separator: " ")
+    }
+    return Node.fragment([
+        img(class: cls("coverDark"), customAttributes: attrs(metadata.cover)),
+        img(class: cls("coverLight"), customAttributes: attrs(lightName)),
+    ])
+}
+
 // MARK: - Blog card
 
 func renderBlogCard(post: Item<BlogMetadata>, locale: Locale) -> Node {
     let slug = post.metadata.slug
-    let cover = post.metadata.cover
 
     return a(
         class: "blogCard",
@@ -17,12 +39,13 @@ func renderBlogCard(post: Item<BlogMetadata>, locale: Locale) -> Node {
             span { post.title }
         }
         div(class: "blogCardImage") {
-            img(customAttributes: [
-                "src": "/static/blog/\(cover).webp",
-                "alt": post.metadata.coverDescription,
-                "loading": "lazy",
-                "style": "--vt-name: post-\(slug)",
-            ])
+            renderCover(
+                metadata: post.metadata,
+                extraAttributes: [
+                    "loading": "lazy",
+                    "style": "--vt-name: post-\(slug)",
+                ]
+            )
         }
         div(class: "blogCardBottom") {
             div(class: "blogCardTags") {
@@ -64,10 +87,15 @@ func renderRSSLink(locale: Locale) -> Node {
 
 // MARK: - Date formatting
 
-private let dateFormatter = DateFormatter()
+private let cachedFoundationLocales: [Locale: Foundation.Locale] = [
+    .en: Foundation.Locale(identifier: "en_US"),
+    .es: Foundation.Locale(identifier: "es_ES"),
+]
 
 func formatDate(_ date: Date, locale: Locale) -> String {
-    dateFormatter.locale = Foundation.Locale(identifier: locale.dateLocaleIdentifier)
-    dateFormatter.setLocalizedDateFormatFromTemplate("ddMMyy")
-    return dateFormatter.string(from: date)
+    date.formatted(
+        .dateTime
+            .day(.twoDigits).month(.twoDigits).year(.twoDigits)
+            .locale(cachedFoundationLocales[locale] ?? .current)
+    )
 }

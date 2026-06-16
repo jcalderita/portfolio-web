@@ -12,7 +12,7 @@ let package = Package(
         .package(url: "https://github.com/loopwerk/SagaParsleyMarkdownReader", from: "1.3.0"),
         .package(url: "https://github.com/loopwerk/SagaSwimRenderer", from: "1.4.1"),
         .package(url: "https://github.com/loopwerk/Moon", from: "1.3.0"),
-        .package(url: "https://github.com/SDWebImage/libwebp-Xcode.git", from: "1.5.0"),
+        .package(url: "https://github.com/swiftlang/swift-subprocess.git", .upToNextMinor(from: "0.5.0")),
     ],
     targets: [
         .executableTarget(
@@ -32,7 +32,7 @@ let package = Package(
         .target(
             name: "ImageOptimizer",
             dependencies: [
-                .product(name: "libwebp", package: "libwebp-Xcode")
+                .product(name: "Subprocess", package: "swift-subprocess")
             ]
         ),
     ]

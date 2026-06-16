@@ -7,7 +7,7 @@ import SagaSwimRenderer
 
 func renderHome(context: PageRenderingContext) -> Node {
     let locale = Locale(from: context.locale)
-    let portfolio = try! loadPortfolio(for: locale)
+    let portfolio = loadPortfolio(for: locale)
 
     let jobTitle = locale.jobsTitle
     let educationTitle = locale.educationTitle
@@ -33,7 +33,7 @@ func renderHome(context: PageRenderingContext) -> Node {
         knowsAbout: allTechnologies
     )
 
-    return baseLayout(page) {
+    return layout(page, kind: .home) {
         renderRole(role: portfolio.role, introduction: portfolio.introduction)
         renderExperiences(title: jobTitle, experiences: portfolio.jobs, locale: locale)
         renderExperiences(title: educationTitle, experiences: portfolio.education, locale: locale)
@@ -60,7 +60,7 @@ func renderBlogIndex(context: PageRenderingContext) -> Node {
         description: locale.blogDescription
     )
 
-    return blogIndexLayout(page) {
+    return layout(page, kind: .blogIndex) {
         h1(class: "sr-only") { "Blog" }
         div(class: "tagButtons") {
             renderTagButton(tag: "all", locale: locale)
@@ -104,51 +104,40 @@ func renderBlogPost(context: ItemRenderingContext<BlogMetadata>) -> Node {
         inLanguage: locale.rawValue
     )
 
-    return blogLayout(page) {
-        // Post title
+    return layout(page, kind: .blog) {
         h1(class: "sr-only") { post.title }
-
-        // Cover image
-        img(class: "postImage", customAttributes: [
-            "src": "/static/blog/\(post.metadata.cover).webp",
-            "alt": post.metadata.coverDescription,
-            "style": "--vt-name: post-\(post.metadata.slug)",
-        ])
-
-        // Table of contents
-        h2(class: "postTitle") { locale.tableOfContents }
-        ol(class: "postIndex") {
-            Node.fragment(
-                headings.filter { $0.level == 2 }.enumerated().map { idx, entry in
-                    li {
-                        button(
-                            class: "postIndexButton",
-                            customAttributes: [
-                                "type": "button",
-                                "onclick":
-                                    "document.getElementById('\(entry.id)')?.scrollIntoView({behavior:'smooth',block:'start'})",
-                            ]
-                        ) {
-                            span(class: "postIndexNumber") { "\(idx + 1)" }
-                            entry.title
-                        }
-                    }
-                }
-            )
-        }
-
-        // Content
+        renderCover(
+            metadata: post.metadata,
+            cssClass: "postImage",
+            extraAttributes: ["style": "--vt-name: post-\(post.metadata.slug)"]
+        )
+        renderTOC(headings: headings, locale: locale)
         article(class: "prose proseArticle") {
             Node.raw(bodyWithIds)
         }
+        renderBlogBottom(locale: locale)
+    }
+}
 
-        // Bottom bar
-        div(class: "blogBottom") {
-            div(class: "blogBackButton") {
-                renderBackButton(locale: locale)
-            }
-            renderUpButton(locale: locale)
+// MARK: - Appendix page
+
+func renderAppendix(context: ItemRenderingContext<EmptyMetadata>) -> Node {
+    let locale = Locale(from: context.locale)
+    let item = context.item
+    let (headings, bodyWithIds) = extractHeadings(from: item.body)
+    let page = PageContext(
+        title: item.title,
+        locale: locale,
+        slug: item.url,
+        description: item.title
+    )
+    return layout(page, kind: .blog) {
+        article(class: "prose proseArticle") {
+            h1 { item.title }
+            renderTOC(headings: headings, locale: locale)
+            Node.raw(bodyWithIds)
         }
+        renderBlogBottom(locale: locale)
     }
 }
 
@@ -163,7 +152,7 @@ func renderLegal(context: ItemRenderingContext<LegalMetadata>) -> Node {
         noIndex: true
     )
 
-    return legalLayout(page) {
+    return layout(page, kind: .legal) {
         Node.raw(context.item.body)
     }
 }
@@ -179,7 +168,7 @@ func render404(context: PageRenderingContext) -> Node {
         noIndex: true
     )
 
-    return baseLayout(page) {
+    return layout(page, kind: .home) {
         div(class: "notFound") {
             h1 { "404" }
             p { locale.notFoundMessage }
@@ -189,13 +178,6 @@ func render404(context: PageRenderingContext) -> Node {
 }
 
 // MARK: - Sitemap
-
-private let dateOnlyFormatter: DateFormatter = {
-    let f = DateFormatter()
-    f.dateFormat = "yyyy-MM-dd"
-    f.timeZone = TimeZone(identifier: "UTC")
-    return f
-}()
 
 func renderSitemap(context: PageRenderingContext) -> String {
     let base = SiteConfig.baseURL.absoluteString
@@ -223,34 +205,21 @@ func renderSitemap(context: PageRenderingContext) -> String {
     xml += " xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">\n"
 
     for path in paths {
-        let url = path.string.hasPrefix("/") ? path.string : "/\(path.string)"
-        let cleanURL = url.hasSuffix("index.html")
-            ? String(url.dropLast("index.html".count))
-            : url
-
         xml += "<url>\n"
-        xml += "<loc>\(base)\(cleanURL)</loc>\n"
+        xml += "<loc>\(base)\(cleanURL(path.string))</loc>\n"
 
-        // lastmod from blog post date
         if let date = dateByURL[path.string] {
-            xml += "<lastmod>\(dateOnlyFormatter.string(from: date))</lastmod>\n"
+            xml += "<lastmod>\(date.formatted(.iso8601.year().month().day()))</lastmod>\n"
         }
 
-        // hreflang alternates
         if let item = itemByDest[path.string], let locale = item.locale, !item.translations.isEmpty {
             var alternates = [(locale, path)]
-            for (tLocale, tItem) in item.translations {
-                if pathSet.contains(tItem.relativeDestination.string) {
-                    alternates.append((tLocale, tItem.relativeDestination))
-                }
+            for (tLocale, tItem) in item.translations where pathSet.contains(tItem.relativeDestination.string) {
+                alternates.append((tLocale, tItem.relativeDestination))
             }
             alternates.sort { $0.0 < $1.0 }
             for (altLocale, altPath) in alternates {
-                let altURL = altPath.string.hasPrefix("/") ? altPath.string : "/\(altPath.string)"
-                let cleanAltURL = altURL.hasSuffix("index.html")
-                    ? String(altURL.dropLast("index.html".count))
-                    : altURL
-                xml += "<xhtml:link rel=\"alternate\" hreflang=\"\(altLocale)\" href=\"\(base)\(cleanAltURL)\"/>\n"
+                xml += "<xhtml:link rel=\"alternate\" hreflang=\"\(altLocale)\" href=\"\(base)\(cleanURL(altPath.string))\"/>\n"
             }
         }
 
@@ -259,4 +228,9 @@ func renderSitemap(context: PageRenderingContext) -> String {
 
     xml += "</urlset>"
     return xml
+}
+
+private func cleanURL(_ raw: String) -> String {
+    let url = raw.hasPrefix("/") ? raw : "/\(raw)"
+    return url.hasSuffix("index.html") ? String(url.dropLast("index.html".count)) : url
 }

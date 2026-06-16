@@ -1,5 +1,5 @@
 {
-  "originHash" : "4b73bcb6042fe25e5118a9805a763cae896f50356fa8d0a1710e035d1334709c",
+  "originHash" : "0104030dcaa171be8db8ccac81ec8f1950b9ffd40e6a1abcd1ba223352bf7a1d",
   "pins" : [
     {
       "identity" : "jxkit",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "a4c1872d36036fe4ade4b1cadb268603e89e25f0",
         "version" : "3.6.0"
-      }
-    },
-    {
-      "identity" : "libwebp-xcode",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/libwebp-Xcode.git",
-      "state" : {
-        "revision" : "0d60654eeefd5d7d2bef3835804892c40225e8b2",
-        "version" : "1.5.0"
       }
     },
     {
@@ -98,6 +89,24 @@
       "state" : {
         "revision" : "95ba0316a9b733e92bb6b071255ff46263bbe7dc",
         "version" : "3.15.1"
+      }
+    },
+    {
+      "identity" : "swift-subprocess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-subprocess.git",
+      "state" : {
+        "revision" : "11633673a41f509f8945f23c96c7acd4adafd679",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "swift-system",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-system",
+      "state" : {
+        "revision" : "7502b711c92a17741fa625d722b0ccbd595d8ed1",
+        "version" : "1.7.2"
       }
     },
     {

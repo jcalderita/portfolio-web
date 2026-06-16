@@ -43,11 +43,15 @@ struct PortfolioMetadata: Decodable {
 
 // MARK: - Loading
 
-func loadPortfolio(for locale: Locale) throws -> Portfolio {
+func loadPortfolio(for locale: Locale) -> Portfolio {
     let name = locale == .es ? "Spanish" : "English"
     guard let url = Bundle.module.url(forResource: name, withExtension: "json") else {
         fatalError("Missing \(name).json in Resources")
     }
-    let data = try Data(contentsOf: url)
-    return try JSONDecoder().decode(Portfolio.self, from: data)
+    do {
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(Portfolio.self, from: data)
+    } catch {
+        fatalError("Failed to load \(name).json: \(error)")
+    }
 }

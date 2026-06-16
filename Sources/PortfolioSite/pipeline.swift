@@ -54,6 +54,25 @@ extension Saga {
         )
     }
 
+    func registerAppendices() -> Self {
+        let known = Set(ContentSection.allCases.map(\.rawValue))
+        let folders = Set(Locale.allCases.flatMap { locale -> [String] in
+            let path = SiteConfig.input + Path(locale.rawValue)
+            return ((try? path.children()) ?? [])
+                .filter(\.isDirectory)
+                .map(\.lastComponent)
+        }).subtracting(known)
+
+        return folders.sorted().reduce(self) { saga, folder in
+            saga.register(
+                folder: Path(folder),
+                metadata: EmptyMetadata.self,
+                readers: [.parsleyMarkdownReader],
+                writers: [.itemWriter(swim(renderAppendix))]
+            )
+        }
+    }
+
     // MARK: - Pages
 
     func createAllPages() -> Saga {
