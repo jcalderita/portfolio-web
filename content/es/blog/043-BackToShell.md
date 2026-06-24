@@ -6,7 +6,7 @@ description: Cómo la IA me devolvió a la shell tras años de GUIs. El ciclo co
 tags: AI, Shell
 cover: BackToShell
 coverDescription: Ilustración de tres Jorges a una mesa: el de niño con un portátil mostrando 'starting learning...' en el terminal, el adulto de pie con gafas de VR señalando un diagrama en la pared que muestra la evolución triciclo → patinete cohete → andador, y el de mayor con un portátil mostrando 'back to the basics...' en el terminal.
-publish: false
+publish: true
 ---
 ---
 ## Mi Problema 🤔
