@@ -12,6 +12,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    container: swift:6.3-noble
 
     steps:
       - name: Checkout code
@@ -19,10 +20,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Swift
-        uses: swift-actions/setup-swift@v2
+      - name: Set up Node
+        uses: actions/setup-node@v6
         with:
-          swift-version: '6.3'
+          node-version: '22'
 
       - name: Cache SPM dependencies
         uses: actions/cache@v6
@@ -31,7 +32,7 @@ jobs:
           key: spm-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
 
       - name: Install cwebp
-        run: sudo apt-get update && sudo apt-get install -y webp
+        run: apt-get update && apt-get install -y webp
 
       - name: Build Swift package
         run: swift build -c release
