@@ -6,7 +6,7 @@ description: Cómo monté una status bar personalizada en Claude Code para tener
 tags: AI, Shell
 cover: AIStatusBar
 coverDescription: Ilustración de Jorge corriendo por un camino de tierra junto a un río con una ciudad medieval al fondo, mientras en la parte inferior aparece una barra de estado con datos: modelo, barra de progreso, distancia 150k/1000k, velocidad 15km/h, energía 67%, esfuerzo Medium y ubicación Pamplona.
-publish: false
+publish: true
 ---
 ---
 ## Mi Problema 🤔

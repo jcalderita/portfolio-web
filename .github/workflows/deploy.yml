@@ -5,31 +5,33 @@ on:
     branches:
       - main
       - developing
+  schedule:
+    - cron: '0 5 * * 3'   # Wednesday 05:00 UTC = 07:00 Madrid (summer) / 06:00 (winter)
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Select latest stable Xcode
-        run: |
-          LATEST=$(ls -d /Applications/Xcode_*.app | grep -v beta | sort -V | tail -1)
-          sudo xcode-select -s "$LATEST"
-
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
+      - name: Set up Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '6.3'
+
       - name: Cache SPM dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: .build
-          key: spm-${{ hashFiles('Package.resolved') }}
+          key: spm-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
 
       - name: Install cwebp
-        run: brew install webp
+        run: sudo apt-get update && sudo apt-get install -y webp
 
       - name: Build Swift package
         run: swift build -c release
@@ -48,14 +50,10 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
-      - name: Publish to social media
-        if: github.ref_name == 'main'
-        continue-on-error: true
-        env:
-          BASE_SHA: ${{ github.event.before }}
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
-        run: swift .github/scripts/publish-social.swift
+  announce:
+    needs: build-and-deploy
+    if: (github.ref_name == 'main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')) || github.ref_name == 'developing'
+    uses: ./.github/workflows/social.yml
+    with:
+      dry_run: ${{ github.ref_name != 'main' }}
+    secrets: inherit

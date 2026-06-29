@@ -27,7 +27,7 @@ extension Saga {
             folder: ContentSection.blog.path,
             metadata: BlogMetadata.self,
             readers: [.parsleyMarkdownReader],
-            filter: \.metadata.publish,
+            filter: { $0.metadata.publish && $0.date <= Date.now },
             writers: [
                 .itemWriter(swim(renderBlogPost)),
                 .listWriter(
