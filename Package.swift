@@ -35,5 +35,6 @@ let package = Package(
                 .product(name: "Subprocess", package: "swift-subprocess")
             ]
         ),
+        .executableTarget(name: "SocialAnnouncer"),
     ]
 )
