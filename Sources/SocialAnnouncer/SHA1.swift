@@ -1,5 +1,3 @@
-import Foundation
-
 // Pure-Swift SHA-1 and HMAC-SHA1 — no CryptoKit, so the binary links and runs
 // on the Linux CI runner. Used only to sign X's OAuth 1.0a requests. Verified
 // against the RFC 2202 known-answer vectors, which guarantees byte-for-byte

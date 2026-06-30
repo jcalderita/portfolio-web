@@ -46,7 +46,7 @@ enum OAuth {
     ) -> String {
         let params: [(String, String)] = [
             ("oauth_consumer_key", credentials.apiKey),
-            ("oauth_nonce", UUID().uuidString.replacingOccurrences(of: "-", with: "")),
+            ("oauth_nonce", UUID().uuidString.replacing("-", with: "")),
             ("oauth_signature_method", "HMAC-SHA1"),
             ("oauth_timestamp", "\(Int(Date.now.timeIntervalSince1970))"),
             ("oauth_token", credentials.accessToken),

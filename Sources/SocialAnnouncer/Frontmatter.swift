@@ -1,18 +1,12 @@
 import Foundation
 
-// Today's date in Madrid as YYYY-MM-DD. en_US_POSIX + a fixed format makes this
-// a plain string comparison against frontmatter `date`, dodging offset/midnight
-// bugs. Mirrors Node's toLocaleDateString('en-CA', { timeZone: 'Europe/Madrid' }).
-private let madridDateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "en_US_POSIX")
-    formatter.timeZone = TimeZone(identifier: "Europe/Madrid")
-    formatter.dateFormat = "yyyy-MM-dd"
-    return formatter
-}()
+// Today's date in Madrid as YYYY-MM-DD. ISO8601FormatStyle with an explicit
+// Madrid time zone yields the civil date there, keeping the result a plain
+// string comparison against frontmatter `date` (dodging offset/midnight bugs).
+private let madridTimeZone = TimeZone(identifier: "Europe/Madrid")!
 
 func todayInMadrid() -> String {
-    madridDateFormatter.string(from: Date.now)
+    Date.now.formatted(Date.ISO8601FormatStyle(timeZone: madridTimeZone).year().month().day())
 }
 
 // Posts whose frontmatter `date` equals today and `publish: true` — one entry
