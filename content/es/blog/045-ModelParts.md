@@ -6,7 +6,7 @@ description: Cómo centralizar índices, claves foráneas y restricciones única
 tags: Swift, Server, DataBase
 cover: ModelParts
 coverDescription: Jorge como sastre sosteniendo una camiseta deportiva frente a un maniquí, con prendas apiladas en una silla a su lado, representando cómo se ensamblan las piezas de un modelo (índices, claves foráneas, restricciones únicas) para dar forma a la estructura final de la base de datos.
-publish: false
+publish: true
 ---
 ---
 ## Mi Problema 🤔
